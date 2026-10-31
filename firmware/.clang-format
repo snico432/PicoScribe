@@ -1,0 +1,19 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+IndentCaseLabels: true
+ColumnLimit: 100
+PointerAlignment: Right
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+
+IncludeCategories:
+  # 2. Third-party / SDK (quoted pico, tinyusb, btstack, bsp)
+  - Regex: '^"(pico/|hardware/|bsp/|tusb\.h|btstack\.h)'
+    Priority: 2
+  # 3. C stdlib
+  - Regex: '^<.*'
+    Priority: 3
+  # 4. Project headers
+  - Regex: '.*'
+    Priority: 4
